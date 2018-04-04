@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="classes" path="src"/>
+	<classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
+	<classpathentry kind="lib" path="D:/workspace/4-1/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/4-1/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/4-1/lib/org.springframework.asm-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/4-1/lib/org.springframework.beans-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/4-1/lib/org.springframework.context-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/4-1/lib/org.springframework.context-sources-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/4-1/lib/org.springframework.core-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/workspace/4-1/lib/org.springframework.expression-3.0.2.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

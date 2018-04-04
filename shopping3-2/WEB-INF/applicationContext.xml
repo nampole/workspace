@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- Data Source -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<!-- JDBC 드라이버 클래스명 설정  -->
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<!-- JDBC 접속 문자열 설정  -->
+		<property name="url">
+			<value>jdbc:mysql://localhost/spring?useUnicode=true&amp;characterEncoding=utf8&amp;characterSetResults=utf8
+			</value>
+		</property>
+		<!-- MySQL 유저ID 설정 -->
+		<property name="username">
+			<value>springuser</value>
+		</property>
+		<!-- MySQL 패스워드 설정  -->
+		<property name="password">
+			<value>springpassword</value>
+		</property>
+	</bean>
+
+	<!-- Shop -->
+	<bean id="shopService" class="logic.ShopImpl" p:itemCatalog-ref="itemCatalog">
+	</bean>
+
+	<!-- ItemCatalog -->
+	<bean id="itemCatalog" class="logic.ItemCatalogImpl"
+		p:itemDao-ref="itemDao">
+	</bean>
+
+	<!-- ItemDao -->
+	<bean id="itemDao" class="dao.ItemDaoImpl" p:dataSource-ref="dataSource">
+	</bean>
+</beans>
